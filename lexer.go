@@ -160,7 +160,7 @@ func (l *Lexer) Name() string { return l.name }
 func (l *Lexer) Value() string { return l.input[l.base:l.pos] }
 
 // Len returns the size of the current read token.
-func (l *Lexer) Len() int { return l.base - l.pos }
+func (l *Lexer) Len() int { return l.pos - l.base }
 
 // Inc increments the position by n.
 func (l *Lexer) Inc(n int) { l.pos += n }
