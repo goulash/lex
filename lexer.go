@@ -168,6 +168,9 @@ func (l *Lexer) Inc(n int) { l.pos += n }
 // Dec decrements the position by n.
 func (l *Lexer) Dec(n int) { l.pos -= n }
 
+// Pos returns the current position in the input.
+func (l *Lexer) Pos() int { return l.pos }
+
 // Input returns a slice of the current position plus n.
 func (l *Lexer) Input(n int) string {
 	return l.input[l.pos+n:]
